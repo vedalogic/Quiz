@@ -165,22 +165,38 @@ h2{
             <button onclick="wrongAnswer()"> India </button>
 
             <p> 3. How many countries are in North America? </p>
-            <button onclick="rightAnswer()"> 3 </button>
             <button onclick="wrongAnswer()"> 1 </button>
+            <button onclick="rightAnswer()"> 3 </button>
+
+            <p>4. What is the correct spelling?</p>
+            <button onclick="rightAnswer()"> wrong </button>
+            <button onclick="wrongAnswer()"> rong </button>
+
+            <p>5. Who lives in a pineapple under the sea?</p>
+            <button onclick="wrongAnswer()"> starfish </button>
+            <button onclick="rightAnswer()"> Sponge Bob </button>
         </div>
         <div class="quiz-box" id="mathquiz">
             <h2> Mathematics </h2>
             <p>1. What is 2 + 5?</p>
-            <button onclick="rightAnswer()"> 7 </button>
             <button onclick="wrongAnswer()"> 25 </button>
+            <button onclick="rightAnswer()"> 7 </button>
 
-             <p>1. What is the square root of 64?</p>
-            <button onclick="rightAnswer()"> 8 </button>
+             <p>2. What is the square root of 64?</p>
             <button onclick="wrongAnswer()"> 7 </button>
+            <button onclick="rightAnswer()"> 8 </button>
 
-            <p>1. What is 2 * 30 * 20 ?</p>
+            <p>3. What is 2 * 30 * 20 ?</p>
             <button onclick="rightAnswer()"> 1200 </button>
-            <button onclick="wrongAnswer()"> 12000 </button>    
+            <button onclick="wrongAnswer()"> 12000 </button> 
+
+            <p>4. What is 2y + 5 if y = 10 ?</p>
+            <button onclick="wrongAnswer()"> 17 </button>
+            <button onclick="rightAnswer()"> 25 </button>
+
+            <p>5. What is 2y / 5 if y = 20 ?</p>
+            <button onclick="rightAnswer()"> 8 </button>
+            <button onclick="wrongAnswer()"> 27 </button>    
         </div>
         <div class="quiz-box" id="sciencequiz">
             <h2> Science </h2>
@@ -188,20 +204,29 @@ h2{
             <button onclick="rightAnswer()"> Africa </button>
             <button onclick="wrongAnswer()"> India </button>
 
-            <p>1. What is the correct spelling?</p>
-            <button onclick="rightAnswer()"> wrong </button>
-            <button onclick="wrongAnswer()"> rong </button>
+            <p>2. What is the cause of global warming?</p>
+            <button onclick="wrongAnswer()"> The greenhouse theory </button>
+            <button onclick="rightAnswer()"> Volcanoes </button>
 
-            <p>1. Where did the famous 2007 tsunami happen?</p>
+            <p>3. Where did the famous 2007 tsunami happen?</p>
             <button onclick="rightAnswer()"> Japan </button>
             <button onclick="wrongAnswer()"> Alaska </button>
+
+            <p>4. What causes tsunamis to happen?</p>
+            <button onclick="rightAnswer()"> Volcanoes </button>
+            <button onclick="wrongAnswer()"> Earthquakes</button>
+
+            <p>5. What causes tectonic plates to shift?</p>
+            <button onclick="rightAnswer()"> convection in the mantle  </button>
+            <button onclick="wrongAnswer()"> the earth old getting old</button>
+
             
         </div>
         <script>
             function register(){
                 let name = prompt("Register Your Name For The Quiz");
-                if(name === null){
-                    name = "guest";
+                if (name === null || name.trim() === "") {
+                    name = "Guest";
                 }
 
                 document.getElementById("welcome").innerHTML = "Hello " + name + ", Welcome to Tech Learner. Your name is now registered.";
