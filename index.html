@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Final Project</title>
+        <style>
+            #div1{
+    background-image:url(https://media.istockphoto.com/id/1395428189/vector/light-mint-green-color-gradient-defocused-blurred-motion-abstract-background-vector.jpg?s=612x612&w=0&k=20&c=cdGTaGMkHqSWPUR0kJG4OCwWHs1QbI3cSqhjH8xJybw=);
+    background-size:cover;
+    background-repeat:no-repeat;
+    height:400px;
+    padding-top:30px;
+}
+table{
+    width:100%;
+    text-align:center;
+    font-size:20px;
+}
+a{
+    color:yellow;
+    cursor:pointer;
+    text-decoration:none;
+    font-weight:bold;
+}
+h1{
+    text-align:center;
+    padding:70px;
+    color:white;
+    opacity:0.3;
+}
+body{
+    margin:0;
+    animation:Vedanshi 6s infinite;
+
+}
+@keyframes Vedanshi{
+    0%{
+        background-color:lightseagreen;
+    }
+    25%{
+        background-color:lightgoldenrodyellow;
+    }    
+    50%{
+        background-color:lightslategray;
+    }    
+    75%{
+        background-color:lightcoral;
+    }    
+    100%{
+        background-color:lightgreen;
+    }        
+}
+h2{
+    text-align:center;
+    margin-top:20px;
+    animation:Vedanshi1 2s infinite alternate;
+}
+@keyframes Vedanshi1{
+    from{
+        font-size:20px;
+        color:green;
+    }
+    to{
+        font-size:25px;
+        color:blue;
+    }
+}
+#welcome{
+    text-align:center;
+    color:darkgreen;
+    font-size:20px;
+    margin-top:15px;
+    font-weight:bold;
+}
+.quiz-container{
+    display:flex;
+    justify-content:space-around;
+    gap:25px;
+    padding:40px;
+    flex-wrap:wrap;
+    background-color:lightcyan;
+}
+.quiz-card{
+    width:32%;
+    text-align:center;
+    font-size:18px;
+    background:transparent;
+}
+.quiz-card img{
+    width:90%;
+    height:auto;
+    border-radius:5px;
+}
+.quiz-card p{
+    text-align:justify;
+    padding:10px;
+    font-size:18px;
+}
+.quiz-card button{
+    background-color:lightpink;
+    padding:10px 25px;
+    cursor:pointer;
+    border-radius:5px;
+    border:none;
+    font-weight:bold;
+    font-size:25px;
+}
+.quiz-card button:hover{
+    background-color:rgb(0, 0, 0);
+    color:rgb(255, 255, 255);
+}
+.quiz-box{
+    text-align:center;
+    font-size:20px;
+    margin:30px;
+    padding:20px;
+    border-radius:10px;
+    background-color:lightpink;
+    display:none;
+}
+        </style>
+    </head>
+    <body onload="register()">
+        <div id="div1">
+            <table>
+                <tr>
+                    <th><a href="#"> Home </a></th>
+                    <th><a href="#gkquiz"> General Knowledge </a></th>
+                    <th><a href="#mathquiz"> Mathematics </a></th>
+                    <th><a href="#sciencequiz"> Science </a></th>
+                </tr>
+            </table>
+            <h1> Codeyoung </h1>
+        </div>
+        <h2> Your Name Is Registered Below </h2>
+        <p id="welcome"></p>
+        <div class="quiz-container">
+
+            <div class="quiz-card">
+                <img src="https://media.proprofs.com/images/QM/user_images/2503852/1562845311.jpg" alt="GK Quiz">
+                <p>A general knowledge quiz is a, often social, activity featuring diverse,, non-specialized questions covering topics like history, science, geography, pop culture, and sports.</p>
+                <button onclick="showGk()"> Start GK Quiz</button>
+            </div>
+
+            <div class="quiz-card">
+                <img src="https://m.media-amazon.com/images/I/51iHLGbf91L.png" alt="Math Quiz">
+                <p>A math quiz is a short, focused assessment designed to measure a student's understanding of specific mathematical concepts, often featuring a mix of multiple-choice, true/false, or short-answer questions.</p>
+                <button onclick="showmath()"> Start Math Quiz</button>
+            </div>
+
+            <div class="quiz-card">
+                <img src="https://play-lh.googleusercontent.com/0vuZSCRhrsPiUdjqv3VQXMObdyeOZOXGriwFstqcejKXZUJ16Bw6g0eoEmeezE7UfO0" alt="Science Quiz">
+                <p>A science quiz is an interactive assessment or trivia game designed to test and reinforce knowledge across various scientific disciplines like biology, chemistry, physics, and earth science.</p>
+                <button onclick="showscience()"> Start Science Quiz</button>
+            </div>
+        </div>
+
+        <div class="quiz-box" id="gkquiz">
+            <h2> GENERAL KNOWLEDGE </h2>
+            <p>1. What is the best selling book in the World?</p>
+            <button onclick="rightAnswer()"> Bible </button>
+            <button onclick="wrongAnswer()"> Charles Dickons </button>
+
+            <p> 2. What country has the highest Life expectancy?</p>
+            <button onclick="rightAnswer()"> Japan </button>
+            <button onclick="wrongAnswer()"> India </button>
+
+            <p> 3. How many countries are in North America? </p>
+            <button onclick="rightAnswer()"> 3 </button>
+            <button onclick="wrongAnswer()"> 1 </button>
+        </div>
+        <div class="quiz-box" id="mathquiz">
+            <h2> Mathematics </h2>
+            <p>1. What is 2 + 5?</p>
+            <button onclick="rightAnswer()"> 7 </button>
+            <button onclick="wrongAnswer()"> 25 </button>
+
+             <p>1. What is the square root of 64?</p>
+            <button onclick="rightAnswer()"> 8 </button>
+            <button onclick="wrongAnswer()"> 7 </button>
+
+            <p>1. What is 2 * 30 * 20 ?</p>
+            <button onclick="rightAnswer()"> 1200 </button>
+            <button onclick="wrongAnswer()"> 12000 </button>    
+        </div>
+        <div class="quiz-box" id="sciencequiz">
+            <h2> Science </h2>
+            <p>1. What is the most common place for elephants to be found?</p>
+            <button onclick="rightAnswer()"> Africa </button>
+            <button onclick="wrongAnswer()"> India </button>
+
+            <p>1. What is the correct spelling?</p>
+            <button onclick="rightAnswer()"> wrong </button>
+            <button onclick="wrongAnswer()"> rong </button>
+
+            <p>1. Where did the famous 2007 tsunami happen?</p>
+            <button onclick="rightAnswer()"> Japan </button>
+            <button onclick="wrongAnswer()"> Alaska </button>
+            
+        </div>
+        <script>
+            function register(){
+                let name = prompt("Register Your Name For The Quiz");
+                if(name === null){
+                    name = "guest";
+                }
+
+                document.getElementById("welcome").innerHTML = "Hello " + name + ", Welcome to Tech Learner. Your name is now registered.";
+                
+                
+                document.getElementById("div1").style.backgroundImage =
+
+                "url('https://img.freepik.com/free-vector/question-marks-background_78370-2896.jpg?semt=ais_hybrid&w=740&q=80')"
+            }
+
+            function rightAnswer(){
+                alert("Correct Answer!");
+            }
+
+            function wrongAnswer(){
+                alert("Wrong Answer! Try Again")
+            }
+            
+            function showGk(){
+                hideall();
+                document.getElementById("gkquiz").style.display = "block";
+            }
+
+            function showmath(){
+                hideall();
+                document.getElementById("mathquiz").style.display = "block";
+            }
+
+            function showscience(){
+                hideall();
+                document.getElementById("sciencequiz").style.display = "block";
+            }
+
+            function hideall(){
+                document.getElementById("gkquiz").style.display = "none";
+                document.getElementById("mathquiz").style.display = "none";
+                document.getElementById("sciencequiz").style.display = "none";
+            }
+
+        </script>
+    </body>
+</html>
